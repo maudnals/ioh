@@ -4,19 +4,18 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header
+    className="header"
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      marginBottom: `1rem`,
     }}
   >
     <div
+      className="wrapped"
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `1rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h4 style={{ margin: 0, display: "flex", alignItems: "center" }}>
         <Link
           to="/"
           style={{
@@ -24,9 +23,10 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          > {siteTitle}
         </Link>
-      </h1>
+        <div className="header-cursor"></div>
+      </h4>
     </div>
   </header>
 )
